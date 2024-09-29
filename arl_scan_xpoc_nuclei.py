@@ -60,7 +60,7 @@ def nuclei(scan_list):
         push_wechat_group(str(data))  # 推送nuclei扫描结果
     
     # 删除临时文件
-    os.remove('temp1.txt')
+#    os.remove('temp1.txt')
     os.remove('newurls.txtls')
     os.remove(output_file)  # 删除nuclei输出结果文件
 
@@ -96,8 +96,8 @@ def xray(scan_list):
             push_wechat_group(message_push)
     
     # 删除临时文件
-    os.remove(json_output)
-    os.remove(html_output)
+#    os.remove(json_output)
+#    os.remove(html_output)
     os.remove('newurls2.txtls')
 
 # 主循环部分
