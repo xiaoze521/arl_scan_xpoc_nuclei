@@ -12,7 +12,7 @@ Token = ''
 ids = []
 
 # 配置
-arl_url = 'https://192.168.31.201:5003/'
+arl_url = 'https://127.0.0.1:5003/'
 username = 'admin'
 password = '123456'
 time_sleep = 1000
