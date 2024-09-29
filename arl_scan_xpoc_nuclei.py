@@ -19,7 +19,7 @@ time_sleep = 1000
 get_size = 500
 
 def push_wechat_group(content):
-    webhook_url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=245b7dfa-290c-403c-bacd-2b34524833be"
+    webhook_url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXXXXXXXXXXXXXXXXXXX"
     try:
         resp = requests.post(webhook_url,
                              json={"msgtype": "markdown",
