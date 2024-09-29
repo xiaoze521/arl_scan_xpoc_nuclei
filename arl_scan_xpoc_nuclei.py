@@ -16,7 +16,7 @@ arl_url = 'https://127.0.0.1:5003/'
 username = 'admin'
 password = '123456'
 time_sleep = 1000
-get_size = 500
+get_size = 500  #获取数量
 
 def push_wechat_group(content):
     webhook_url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=XXXXXXXXXXXXXXXXXXXX"
@@ -120,9 +120,9 @@ while True:
         # 更新请求头部，包含Token
         headers = {'Token': Token, 'Content-Type': 'application/json; charset=UTF-8'}
         print('开始获取最近侦察资产')
-
-        # 获取任务列表
-        req = requests.get(url=arl_url + '/api/task/?page=8&size=' + str(get_size), headers=headers, timeout=30000, verify=False)
+ 
+        # 获取任务列表  page 为页数
+        req = requests.get(url=arl_url + '/api/task/?page=1&size=' + str(get_size), headers=headers, timeout=30000, verify=False)
         result = json.loads(req.content.decode())
 
         # 清空 IDs 列表，并收集所有状态为 'done' 的任务 ID
